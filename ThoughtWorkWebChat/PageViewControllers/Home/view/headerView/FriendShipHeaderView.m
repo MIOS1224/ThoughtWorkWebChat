@@ -14,34 +14,17 @@
 #import "AppDelegate.h"
 
 @interface FriendShipHeaderView()
-// 头像
-@property (nonatomic,weak) UIImageView *avatarView;
-// 昵称
-@property (nonatomic,weak) YYLabel *screenNameLable;
-// 正文
-@property (nonatomic,weak) YYLabel *contentLable;
-// 时间
-@property (nonatomic,weak) YYLabel *createAtLable;
-// 位置
-@property (nonatomic,weak) YYLabel *locationLable;
-// 来源
-@property (nonatomic,weak) YYLabel *sourceLable;
-// 更多按钮
-@property (nonatomic,weak) UIButton *operationMoreBtn;
-// 全文/收起 按钮
-@property (nonatomic,weak) UIButton *expandBtn;
-// 配图View
-@property (nonatomic,weak) FriendPhotosView *photosView;
-// 分享View
-//@property (nonatomic,weak) MHMomentShareInfoView *shareInfoView;
-// videoView
-//@property (nonatomic,weak) MHMomentVideoView *videoView;
-// upArrow
-@property (nonatomic,weak) UIImageView *upArrowView;
-// 更多操作view
-@property (nonatomic,weak) MomentOperationMoreView *operationMoreView;
-// viewModel
-@property (nonatomic,strong) FriendItemViewModel *viewModel;
+
+@property (nonatomic,weak) UIImageView *avatarView; // 头像
+@property (nonatomic,weak) YYLabel *screenNameLable; // 昵称
+@property (nonatomic,weak) YYLabel *contentLable; // 正文
+@property (nonatomic,weak) UIButton *expandBtn; // 全文/收起 按钮
+@property (nonatomic,weak) UIButton *operationMoreBtn; // 更多按钮
+@property (nonatomic,weak) UIImageView *upArrowView; // upArrow
+@property (nonatomic,weak) FriendPhotosView *photosView; // 配图View
+@property (nonatomic,weak) MomentOperationMoreView *operationMoreView; // 更多操作view
+@property (nonatomic,strong) FriendItemViewModel *viewModel; // viewModel
+
 @end
 
 
@@ -70,6 +53,10 @@
     return self;
 }
 
+#pragma mark - 初始化
+- (void)_setup{
+    self.contentView.backgroundColor = [UIColor whiteColor];
+}
 
 #pragma mark - 公共方法
 - (void)bindViewModel:(FriendItemViewModel *)viewModel{
@@ -94,30 +81,6 @@
     self.photosView.frame = viewModel.photosViewFrame;
     [self.photosView bindViewModel:viewModel];
     
-    // 分享
-//    self.shareInfoView.hidden = !(viewModel.moment.type == MHMomentExtendTypeShare);
-//    self.shareInfoView.frame = viewModel.shareInfoViewFrame;
-//    [self.shareInfoView bindViewModel:viewModel];
-    
-    // 视频
-//    self.videoView.hidden = !(viewModel.moment.type == MHMomentExtendTypeVideo);
-//    self.videoView.frame = viewModel.videoViewFrame;
-//    [self.videoView bindViewModel:viewModel];
-    
-    // 位置
-//    self.locationLable.textLayout = viewModel.locationLableLayout;
-//    self.locationLable.frame = viewModel.locationLableFrame;
-//
-//
-//    // 时间
-//    self.createAtLable.textLayout = viewModel.createAtLableLayout;
-//    self.createAtLable.frame = viewModel.createAtLableFrame;
-//
-//    // 来源
-//    self.sourceLable.textLayout = viewModel.sourceLableLayout;
-//    self.sourceLable.frame = viewModel.sourceLableFrame;
-    
-    
     // 更多操作按钮
     self.operationMoreBtn.frame = viewModel.operationMoreBtnFrame;
     
@@ -129,11 +92,6 @@
     
     // 箭头
     self.upArrowView.frame = viewModel.upArrowViewFrame;
-}
-
-#pragma mark - 初始化
-- (void)_setup{
-    self.contentView.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - 创建自控制器

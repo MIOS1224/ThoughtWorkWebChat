@@ -20,10 +20,6 @@ target 'ThoughtWorkWebChat' do
   pod 'YYWebImage'                        , '1.0.5'
   # 高性能的 iOS 缓存框架
   pod 'YYCache'                           , '1.0.4'
-  # 环形进度条
-  pod 'DACircularProgress'                , '2.3.1'
-  # iOS 键盘监听管理工具
-  pod 'YYKeyboardManager'                 , '1.0.1'
   # 导航栏统一管理方案
   pod 'YPNavigationBarTransition', '~>2.0.9'
   pod 'Masonry', '1.1.0'

@@ -1,6 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-ThoughtWorkWebChat/Pods-ThoughtWorkWebChat-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
-${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework
 ${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework
 ${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework
@@ -12,7 +11,6 @@ ${BUILT_PRODUCTS_DIR}/YPNavigationBarTransition/YPNavigationBarTransition.framew
 ${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework
 ${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework
 ${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework
-${BUILT_PRODUCTS_DIR}/YYKeyboardManager/YYKeyboardManager.framework
 ${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework
 ${BUILT_PRODUCTS_DIR}/YYText/YYText.framework
 ${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework
